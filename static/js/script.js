@@ -1,40 +1,40 @@
-console.log('Its working')
 
-let theme = localStorage.getItem('theme')
 
-if(theme == null){
-	setTheme('light')
-}else{
-	setTheme(theme)
+let theme = localStorage.getItem("theme");
+
+if (theme == null) {
+  setTheme("light");
+} else {
+  setTheme(theme);
 }
 
-let themeDots = document.getElementsByClassName('theme-dot')
+// function to toggle between light and dark theme
+function toggleTheme() {
+  if (localStorage.getItem("theme") === "blue") {
+    setTheme("light");
+  } else {
+    setTheme("blue");
+  }
+}
+function setTheme(mode) {
+  if (mode == "light") {
+    document.getElementById("theme-style").href = static + "/default.css";
+  }
 
+  if (mode == "blue") {
+    document.getElementById("theme-style").href = static + "/blue.css";
+  }
 
-for (var i=0; themeDots.length > i; i++){
-	themeDots[i].addEventListener('click', function(){
-		let mode = this.dataset.mode
-		console.log('Option clicked:', mode)
-		setTheme(mode)
-	})
+  localStorage.setItem("theme", mode);
 }
 
-function setTheme(mode){
-	if(mode == 'light'){
-		document.getElementById('theme-style').href = static + '/default.css'
-	}
-
-	if(mode == 'blue'){
-		document.getElementById('theme-style').href = static + '/blue.css'
-	}
-
-	if(mode == 'green'){
-		document.getElementById('theme-style').href = static + '/green.css'
-	}
-
-	if(mode == 'purple'){
-		document.getElementById('theme-style').href = static + '/purple.css'
-	}
-
-	localStorage.setItem('theme', mode)
-}
+// Immediately invoked function to set the theme on initial load
+(function () {
+  if (localStorage.getItem("theme") === "blue") {
+    setTheme("blue");
+    document.getElementById("slider").checked = true;
+  } else {
+    setTheme("light");
+    document.getElementById("slider").checked = false;
+  }
+})();

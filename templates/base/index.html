@@ -6,6 +6,10 @@
     <link rel="icon" type="image/png" href="{% static 'images/shiv.jpg' %}" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
+      src="https://kit.fontawesome.com/67bc463eb8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-47692315-56"
     ></script>
@@ -64,14 +68,14 @@
             </h5>
 
             <div id="theme-options-wrapper">
-              <div data-mode="light" id="light-mode" class="theme-dot"></div>
-              <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-              <div data-mode="green" id="green-mode" class="theme-dot"></div>
-              <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+              <label id="switch" class="switch">
+                <input type="checkbox" onchange="toggleTheme()" id="slider" />
+                <span class="slider round"></span>
+              </label>
             </div>
 
             <p id="settings-note">
-              *Theme settings will be saved for<br />your next vist
+              *Theme settings will be saved for<br />your next visit
             </p>
           </div>
 
@@ -105,6 +109,12 @@
               time on online coding sites just doing nothing rather than coding.
             </p>
 
+            <p>
+              A competitive programmer with primary focus on Python
+              and Little knowledge of Data Science.
+              <a target="_blank" href="{% static 'resume.pdf' %}">My Resume</a>
+            </p>
+
             <!-- <p>
 
 					</p> -->
@@ -112,64 +122,25 @@
 
             <h3>My Other Profiles:</h3>
 
-            <a
-              style="margin: 5px"
+            <a class="social_links"
               href="https://www.linkedin.com/in/the-brainiac/"
               target="_blank"
-              ><img
-                width="250"
-                src="https://img.shields.io/badge/LinkedIn-the--brainiac-yellowgreen?style=for-the-badge&logo=linkedin&logoColor=white"
-                alt="Linkedin"
-            /></a>
-            <!-- <a style="margin:5px;" href="mailto:shiv71290@gmail.com" target="_blank"><img width="250" src="https://img.shields.io/badge/Gmail-Shivshanker-blue?&style=for-the-badge&logo=gmail&logoColor=red" alt=""></a> -->
-            <a
-              style="margin: 5px"
+              ><i class="fab fa-linkedin fa-3x"></i
+            ></a>
+            <a class="social_links"
+              href="https://github.com/the-brainiac"
+              target="_blank"
+              ><i class="fab fa-github fa-3x"></i
+            ></a>
+            <a class="social_links"
               href="https://www.hackerrank.com/the_brainiac_/"
               target="_blank"
-              ><img
-                width="250"
-                src="https://img.shields.io/badge/HackerRank-the_brainiac-darkgreen?&style=for-the-badge&logo=hackerrank&logoColor=dark-green"
-                alt=""
-            /></a>
-            <a
-              style="margin: 5px"
-              href="https://www.hackerearth.com/@the-brainiac"
-              target="_blank"
-              ><img
-                width="250"
-                src="https://img.shields.io/badge/HackerEarth-the_brainiac-purple?&style=for-the-badge&logo=hackerearth&logoColor=light-purple"
-                alt=""
-            /></a>
-            <a
-              style="margin: 5px"
-              href="https://auth.geeksforgeeks.org/user/the_brainiac/profile"
-              target="_blank"
-              ><img
-                width="250"
-                src="https://img.shields.io/badge/GeeksforGeeks-the_brainiac-green?&style=for-the-badge&logo=geeksforgeeks&logoColor=white"
-                alt=""
-            /></a>
-            <a
-              style="margin: 5px"
-              href="https://www.codechef.com/users/the_brainiac"
-              target="_blank"
-              ><img
-                width="250"
-                src="https://img.shields.io/badge/CodeChef-the_brainiac-brown?&style=for-the-badge&logo=codechef&logoColor=white"
-                alt=""
-            /></a>
+              ><i class="fab fa-hackerrank fa-3x"></i
+            ></a>
           </div>
 
           <div class="top-skills">
             <h4>TOP EXPERTISE</h4>
-
-            <p>
-              A competitive programmer with primary focus on Python and Django
-              and Little knowledge of Data Science:
-              <a target="_blank" href="{% static 'resume.pdf' %}"
-                >Download Resume</a
-              >
-            </p>
 
             <div id="skills">
               <ul>
@@ -181,7 +152,7 @@
               </ul>
 
               <ul>
-                <li>C</li>
+                <li>C Programming Language</li>
                 <li>Django Rest Framrwork</li>
                 <li>C++</li>
                 <li>SQL</li>
@@ -196,7 +167,7 @@
 
     <section class="s1">
       <div id="my-projects" class="main-container">
-        <h3 style="text-align: center">Some of my past projects</h3>
+        <h3 style="text-align: center">My Projects</h3>
 
         <div class="post-wrapper">
           {% for project in projects %}
