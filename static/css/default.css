@@ -136,7 +136,6 @@ h6 { font-size: 16px;}
 	display: flex;
 	padding: 10px;
 }
-
 #dot-1{
 	background-color:  #FC6058;
 }
@@ -161,7 +160,6 @@ h6 { font-size: 16px;}
 	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
 
 }
-
 
 .left-column{
 	grid-area: left-column;

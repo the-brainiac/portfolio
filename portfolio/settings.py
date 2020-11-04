@@ -26,7 +26,7 @@ SECRET_KEY = 'q^xn2jhh^2=o-al02ldk9l6#!d_qm#z6%-myv#*qg1c+w2b=ms'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['shivshanker.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost','shivshanker.pythonanywhere.com']
 
 
 # Application definition
