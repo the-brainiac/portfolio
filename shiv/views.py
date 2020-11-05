@@ -27,7 +27,7 @@ def projects(request):
 
 	page = request.GET.get('page')
 
-	paginator = Paginator(projects, 5)
+	paginator = Paginator(projects, 9)
 
 	try:
 		projects = paginator.page(page)
