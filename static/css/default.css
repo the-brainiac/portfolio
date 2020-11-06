@@ -13,7 +13,7 @@
 	--previewShadow:#f0ead6;
 
 
-	--buttonColor:black;
+	--buttonColor:#28a745;
 
 
 }
@@ -442,8 +442,8 @@ h6 { font-size: 16px;}
   }
   .btn-success {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745;
+    background-color: var(--buttonColor);
+    border-color: var(--buttonColor);
 }
 .btn-redirect {
     font-weight: 400;
@@ -474,7 +474,7 @@ h6 { font-size: 16px;}
 	margin: 5px;
 }
 a>i:hover{
-	color: rgb(121, 78, 150);
+	color: #28a745;
 }
 
 #contact-form{
