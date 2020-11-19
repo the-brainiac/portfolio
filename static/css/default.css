@@ -63,7 +63,9 @@ h6 { font-size: 16px;}
 	border-bottom:1px solid var(--borderColor);
 	overflow:auto;
 }
-
+#intro-container{
+	height: 100vh;
+}
 .s2{
 	background-color: var(--secondaryColor);
 	border-bottom:1px solid var(--borderColor);
@@ -365,7 +367,7 @@ h6 { font-size: 16px;}
 }
 
 
-#skills{
+.skills{
 	display: flex;
 	justify-content: space-evenly;
 	background-color: var(--previewShadow);

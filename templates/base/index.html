@@ -46,7 +46,7 @@
     <link id="theme-style" rel="stylesheet" type="text/css" href="" />
   </head>
   <body>
-    <section class="s1">
+    <section class="s1" id="intro-container">
       <div class="main-container">
         <div class="greeting-wrapper">
           <h1>
@@ -64,7 +64,7 @@
           <div class="left-column">
             <img id="profile_pic" src="{% static 'images/shiv.jpg' %}" />
             <h5 style="text-align: center; line-height: 0">
-              Personalize Theme
+              Select Theme
             </h5>
 
             <div id="theme-options-wrapper">
@@ -145,13 +145,14 @@
           <div class="top-skills">
             <h3>Top Expertise</h3>
 
-            <div id="skills">
+            <div class="skills" id="skills">
               <ul>
                 <li>Python</li>
                 <li>Django</li>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
+                <li>Sass</li>
               </ul>
 
               <ul>
@@ -160,8 +161,25 @@
                 <li>C++</li>
                 <li>SQL</li>
                 <li>Git/GitHub</li>
+                <li>Ajax</li>
               </ul>
             </div>
+            <div class="top-skills">
+              <h3>Other Tools and Modules</h3>
+  
+              <div class="skills">
+                <ul>
+                  <li>Regex</li>
+                  <li>Bash Script</li>
+                </ul>
+  
+                <ul>
+                  <li>Numpy</li>
+                </ul>
+                <ul>
+                  <li>Pandas</li>
+                </ul>
+              </div>
             <!-- <img id="social_img" src="{% static 'images/Screenshot from 2020-09-28 16-18-27.png' %}"> -->
           </div>
         </div>
