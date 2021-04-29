@@ -10,14 +10,16 @@ from django.template.loader import render_to_string
 # from .forms import PostForm
 from .filters import ProjectFilter
 
-from .models import Project
+from .models import Project, Resume, Profile
 
 # Create your views here.
 
 def home(request):
 	projects = Project.objects.filter(active=True, featured=True)[0:3]
+	resume = Resume.objects.filter(featured=True)[0]
+	profile = Profile.objects.filter()
 
-	context = {'projects':projects}
+	context = {'projects':projects, 'resume':resume, 'profile':profile}
 	return render(request, 'base/index.html', context)
 
 def projects(request):

@@ -475,8 +475,13 @@ h6 { font-size: 16px;}
 	color : rgb(27, 30, 51);
 	margin: 5px;
 }
-a>i:hover{
-	color: #28a745;
+
+a>svg{
+	height:40px;
+}
+
+a>svg:hover{
+	fill: #28a745;
 }
 
 #contact-form{

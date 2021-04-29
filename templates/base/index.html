@@ -112,7 +112,8 @@
             <p>
               A competitive programmer with primary focus on Python and Little
               knowledge of Data Science.
-              <a target="_blank" href="{% static 'resume.pdf' %}">My Resume</a>
+              <br>
+              <a target="_blank" href="{{resume.source.url}}">My Resume</a>
             </p>
 
             <!-- <p>
@@ -121,25 +122,15 @@
             <hr />
 
             <h3>My Other Profiles:</h3>
-
+            {% for profiles in profile %}
             <a
-              class="social_links"
-              href="https://www.linkedin.com/in/the-brainiac/"
-              target="_blank"
-              ><i class="fab fa-linkedin fa-3x"></i
-            ></a>
-            <a
-              class="social_links"
-              href="https://github.com/the-brainiac"
-              target="_blank"
-              ><i class="fab fa-github fa-3x"></i
-            ></a>
-            <a
-              class="social_links"
-              href="https://www.hackerrank.com/the_brainiac_/"
-              target="_blank"
-              ><i class="fab fa-hackerrank fa-3x"></i
-            ></a>
+            class="social_links"
+            href="{{profiles.redirect_link}}"
+            target="_blank"
+            >
+            {{profiles.svg|safe}}
+            </a>
+            {% endfor %}
           </div>
 
           <div class="top-skills">

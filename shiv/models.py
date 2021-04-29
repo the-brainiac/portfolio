@@ -14,8 +14,23 @@ class Project(models.Model):
     thumbnail     = models.ImageField(null=True, blank=True, upload_to="images", default="/images/placeholder.png")
     active        = models.BooleanField(default=False)
     featured      = models.BooleanField(default=False)
-    tags          = models.ManyToManyField(Tag, null=True, blank=True)
+    tags          = models.ManyToManyField(Tag, blank=True)
     redirect_link = models.CharField(max_length=200, null=True, blank=True)
     
     def __str__(self):
         return self.project_name
+
+class Resume(models.Model):
+    source = models.FileField(upload_to="images")
+    featured = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.source)
+
+class Profile(models.Model):
+    profile_name = models.CharField(max_length=200)
+    redirect_link = models.CharField(max_length=200)
+    svg = models.TextField()
+
+    def __str__(self):
+        return self.profile_name
